@@ -1,0 +1,262 @@
+body{
+  color: white;
+  font-family:mukta;
+  background-color: rgb(8,28,41);
+}
+
+.header{
+  position: fixed;
+  display: flex;
+  background-color: rgb(6,17,42);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  justify-content: space-evenly;  
+  align-items: center;
+  z-index: 5;
+}
+.siteName{
+  font-size: 35px;
+  font-weight: 600;
+  color: rgb(60,153,157);
+  min-width: max-content;
+}
+.hamburgerMenu{
+  display: none;
+  position: absolute;
+  right: 50px;
+}
+
+.active{
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s;
+  margin: 45px;
+}
+.icon .active{
+  margin: 0;
+}
+nav a:hover,
+nav a:active{
+  color: #0ef;
+}
+.searchbox{
+  display: flex;
+}
+.headerSearch{
+  border: none;
+  padding: 0px;
+  margin: 0;
+  border-radius: 8px 0px 0px 8px;
+  height: 34.5px;
+  padding-right: 60px;
+  padding-left: 10px;
+  border-right: 0px;
+  background-color: transparent;
+  border: 1px solid rgb(60,153,157);
+}
+.header ::placeholder{
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
+.search{
+  background-color: rgb(60,153,157);
+  color: white;
+  height: 36px;
+  border-radius: 0px 8px 8px 0px;
+  border: 0px solid rgb(60,153,157);
+  font-size: 15px;
+  font-weight: 500;
+}
+.homePage{
+  display: flex;
+  height: 100vh;
+  min-width: 100vh;
+  justify-content: center;
+  align-items: center;
+  gap: 300px;
+}
+.homePage-text{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.intro{
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
+  line-height: 40px;
+}
+.name{
+  font-weight: 900;
+  font-size: 35px;
+}
+.description{
+  display: flex;
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 20px;
+  max-width: 400px;
+  line-height: 1.5;
+}
+.icons{
+  display: flex;
+  margin-bottom: 30px;
+}
+.icon{
+  display: flex;
+  margin-right: 30px;
+  font-size: 20px;
+}
+.button{
+  padding: 10px 25px;
+  box-shadow: 0px 0px 40px rgba(60,153,157,0.6);
+  border-radius: 20px;
+  border:none;
+  background-color: rgb(60,153,157);
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+  max-width: 300px;
+}
+.box{
+  display: flex;
+  background-color:transparent ;
+}
+.me{
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  object-fit:cover;
+  box-shadow: 0px 0px 600px rgba(60,153,157,1);
+  border: 3px solid white;
+  padding: 8px;
+  border-radius: 50%; 
+}
+.aboutMePage{
+  display: flex;
+  height: 100vh;
+  position: relative;
+  justify-content: center;
+  gap: 200px;
+  align-items: center;
+}
+.aboutMe{
+  position: relative;
+  max-width: 600px;
+}
+.aboutMeHeading{
+  font-size: 30px;
+  font-weight: 900;
+}
+.aboutMeContent{
+  font-size: 22px;
+}
+
+.myServicesPage{
+  display: flex;
+  height: 100vh;
+  min-width: 100vh;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+}
+.myServicesPage .aboutMe{
+  max-width: 500px;
+}
+.myServicesPage .me{
+  object-fit: cover;
+}
+
+.myProjectsPage{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+}
+.githubLinks{
+  color: rgba(60,153,157);
+  font-size: larger;
+}
+.myProjectsPage .me{
+  object-fit: cover;
+}
+.myProjectsPage .aboutMe{
+  max-width: 600px;
+}
+@media (max-width: 1231px) {
+  .active{
+    margin:30px
+  }
+
+  .searchbox {
+    display: none; /* Hide the search box for smaller screens */
+  }
+}
+@media (max-width: 976px) {
+  .aboutMePage ,.homePage,.myProjectsPage,.myServicesPage{
+    font-size: 14px;
+    gap:0px;
+    height: 70vh;
+  }
+  .me{
+    height: 100px;
+    width: 100px;
+  }
+
+}
+@media (max-width:790px){
+  .active{
+    margin: 20px;
+  }
+}
+@media (max-width:730px){
+  .me{
+    display: none;
+  }
+
+  .aboutMeContent{
+    font-size:medium;
+  }
+}
+@media (max-width:690px){
+  .siteName{
+    position: absolute;
+    left: 50px;
+  }
+  .active{
+    display:block;
+    position: relative;
+    margin: 0;
+  }
+  nav{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(60,153,157);
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    font-size: 20px;
+    min-width: 200px;
+  }
+  .hamburgerMenu{
+    display: block;
+  }
+  
+}
+@media (max-width:350px){
+  .myServicesPage .aboutMe{
+    left: -80px;
+  }
+  .homePage-text{
+    left: -130px;
+  }
+}
